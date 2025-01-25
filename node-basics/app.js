@@ -1,9 +1,4 @@
-const fs = require('fs');
+const myMath = require('./modules/myMath/myMath');
 
-fs.readFile('data.txt', 'utf8', (err, data) => {
-    if (err) {
-        console.error("Помилка читання файлу:", err);
-        return;
-    }
-    console.log("Вміст файлу data.txt:", data);
-});
+console.log('Summary:', myMath.sum(3, 2) );
+console.log('Multiply:', myMath.multiply(7, 2) );
